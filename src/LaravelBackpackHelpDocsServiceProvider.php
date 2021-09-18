@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace SeanPoynterSmith\LaravelBackpackHelpDocs;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use SeanPoynterSmith\LaravelBackpackHelpDocs\Commands\LaravelBackpackHelpDocsCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LaravelBackpackHelpDocsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('laravel-backpack-help-docs')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_laravel-backpack-help-docs_table')
+            ->hasCommand(LaravelBackpackHelpDocsCommand::class);
     }
 }
