@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "spoyntersmith/laravel-backpack-help-docs",
+    "description": "This is my package laravel-backpack-help-docs",
     "keywords": [
-        ":vendor_name",
+        "spoyntersmith",
         "laravel",
-        ":package_slug"
+        "laravel-backpack-help-docs"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/spoyntersmith/laravel-backpack-help-docs",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Séan Poynter-Smith",
+            "email": "spoyntersmith@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "spoyntersmith\\LaravelBackpackHelpDocs\\": "src",
+            "spoyntersmith\\LaravelBackpackHelpDocs\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "spoyntersmith\\LaravelBackpackHelpDocs\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "spoyntersmith\\LaravelBackpackHelpDocs\\LaravelBackpackHelpDocsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "LaravelBackpackHelpDocs": "spoyntersmith\\LaravelBackpackHelpDocs\\LaravelBackpackHelpDocsFacade"
             }
         }
     },
