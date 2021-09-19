@@ -8,12 +8,15 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('laravel-backpack-help-docs_table', function (Blueprint $table) {
+        Schema::create('backpack_help_docs', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->string('name')->unique()->index();
+            $table->text('content')->nullable();
             $table->timestamps();
         });
+    }
+
+    public function down() {
+        Schema::dropIfExists('backpack_help_docs');
     }
 };
