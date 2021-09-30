@@ -22,5 +22,10 @@ class LaravelBackpackHelpDocsServiceProvider extends PackageServiceProvider
             ->hasRoute('backpack/custom')
             ->hasMigration('create_laravel_backpack_help_docs_table')
             ->hasCommand(LaravelBackpackHelpDocsCommand::class);
+
+        $this->app->config["filesystems.disks.help-docs"] = [
+            'driver' => 'local',
+            'root' => storage_path('app/help-docs'),
+        ];
     }
 }

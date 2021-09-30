@@ -8,6 +8,7 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
  * Class HelpDocCrudController
+ *
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
@@ -27,8 +28,9 @@ class HelpDocCrudController extends CrudController
     public function setup()
     {
         CRUD::setModel(\SeanPoynterSmith\LaravelBackpackHelpDocs\Models\HelpDoc::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/help-doc');
+        CRUD::setRoute(config('backpack.base.route_prefix').'/help-doc');
         CRUD::setEntityNameStrings('help doc', 'help docs');
+        $this->crud->setShowView('backpack-help-docs::show-help-doc');
     }
 
     /**
@@ -40,6 +42,7 @@ class HelpDocCrudController extends CrudController
     protected function setupListOperation()
     {
         $this->crud->column('name');
+        $this->crud->column('plain_content');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -56,14 +59,24 @@ class HelpDocCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
+        $this->crud->removeAllButtons();
+        config(['elfinder.disks' => ['help-docs']]);
+
         CRUD::setValidation(HelpDocRequest::class);
 
         $this->crud->field('name');
 
-        $this->crud->addField([   // CKEditor
-            'name'          => 'content',
-            'label'         => 'Content',
-            'type'          => 'tinymce',
+        $this->crud->addField([
+            'name'    => 'content',
+            'label'   => 'Content',
+            'type'    => 'tinymce',
+            'options' => [
+                'plugins' => 'image,link,media',
+                'height'  => 500,
+                'removed_menuitems' => 'newdocument',
+                'file_picker_types' => 'image',
+                'images_upload_base_path' => '/help-doc-images',
+            ],
         ]);
 
         /**
@@ -82,5 +95,14 @@ class HelpDocCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    protected function setupShowOperation() {
+        $this->crud->set('show.setFromDb', false);
+        $this->crud->column('name');
+        $this->crud->column('content')->type('textarea')->attributes([
+            'escaped' => false,
+        ])->wrapper(['class' => 'w-100']);
+        $this->crud->removeAllButtons();
     }
 }

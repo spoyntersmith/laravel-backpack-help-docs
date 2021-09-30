@@ -13,4 +13,16 @@ class HelpDoc extends Model
     protected $guarded = ['id'];
 
     protected $table = 'backpack_help_docs';
+
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::saving(function ($helpDoc) {
+            $helpDoc->plain_content = strip_tags($helpDoc->content);
+        });
+    }
 }
