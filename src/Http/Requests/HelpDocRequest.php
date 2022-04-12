@@ -1,6 +1,6 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs\Http\Requests;
+namespace Spoyntersmith\LaravelBackpackHelpDocs\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

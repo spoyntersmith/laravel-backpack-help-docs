@@ -1,10 +1,10 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs\Tests;
+namespace Spoyntersmith\LaravelBackpackHelpDocs\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use SeanPoynterSmith\LaravelBackpackHelpDocs\LaravelBackpackHelpDocsServiceProvider;
+use Spoyntersmith\LaravelBackpackHelpDocs\LaravelBackpackHelpDocsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'SeanPoynterSmith\\LaravelBackpackHelpDocs\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Spoyntersmith\\LaravelBackpackHelpDocs\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

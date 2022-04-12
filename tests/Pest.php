@@ -1,5 +1,5 @@
 <?php
 
-use SeanPoynterSmith\LaravelBackpackHelpDocs\Tests\TestCase;
+use Spoyntersmith\LaravelBackpackHelpDocs\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

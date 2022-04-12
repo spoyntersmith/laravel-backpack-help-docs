@@ -1,6 +1,6 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs\Models;
+namespace Spoyntersmith\LaravelBackpackHelpDocs\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

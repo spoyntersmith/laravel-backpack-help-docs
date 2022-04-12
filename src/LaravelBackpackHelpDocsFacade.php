@@ -1,11 +1,11 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs;
+namespace Spoyntersmith\LaravelBackpackHelpDocs;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \SeanPoynterSmith\LaravelBackpackHelpDocs\LaravelBackpackHelpDocs
+ * @see \Spoyntersmith\LaravelBackpackHelpDocs\LaravelBackpackHelpDocs
  */
 class LaravelBackpackHelpDocsFacade extends Facade
 {

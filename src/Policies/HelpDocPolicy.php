@@ -1,8 +1,8 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs\Policies;
+namespace Spoyntersmith\LaravelBackpackHelpDocs\Policies;
 
-use SeanPoynterSmith\LaravelBackpackHelpDocs\Models\HelpDoc;
+use Spoyntersmith\LaravelBackpackHelpDocs\Models\HelpDoc;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 

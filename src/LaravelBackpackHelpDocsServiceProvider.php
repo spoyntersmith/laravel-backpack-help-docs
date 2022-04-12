@@ -1,10 +1,10 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs;
+namespace Spoyntersmith\LaravelBackpackHelpDocs;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use SeanPoynterSmith\LaravelBackpackHelpDocs\Commands\LaravelBackpackHelpDocsCommand;
+use Spoyntersmith\LaravelBackpackHelpDocs\Commands\LaravelBackpackHelpDocsCommand;
 
 class LaravelBackpackHelpDocsServiceProvider extends PackageServiceProvider
 {

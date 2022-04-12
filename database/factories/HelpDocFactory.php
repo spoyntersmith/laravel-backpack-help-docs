@@ -1,8 +1,8 @@
 <?php
 
-namespace SeanPoynterSmith\LaravelBackpackHelpDocs\Database\Factories;
+namespace Spoyntersmith\LaravelBackpackHelpDocs\Database\Factories;
 
-use SeanPoynterSmith\LaravelBackpackHelpDocs\Models\HelpDoc;
+use Spoyntersmith\LaravelBackpackHelpDocs\Models\HelpDoc;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class HelpDocFactory extends Factory

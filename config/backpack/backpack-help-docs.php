@@ -1,5 +1,5 @@
 <?php
-// config for SeanPoynterSmith/LaravelBackpackHelpDocs
+// config for Spoyntersmith/LaravelBackpackHelpDocs
 return [
 
 ];

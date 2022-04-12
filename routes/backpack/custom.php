@@ -14,7 +14,7 @@ Route::group([
         (array) config('backpack.base.web_middleware', 'web'),
         (array) config('backpack.base.middleware_key', 'admin')
     ),
-    'namespace'  => 'SeanPoynterSmith\LaravelBackpackHelpDocs\Http\Controllers\Admin',
+    'namespace'  => 'Spoyntersmith\LaravelBackpackHelpDocs\Http\Controllers\Admin',
 ], function () { // custom admin routes
     Route::crud('help-doc', 'HelpDocCrudController');
 }); // this should be the absolute last line of this file
