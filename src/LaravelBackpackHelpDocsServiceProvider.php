@@ -1,10 +1,10 @@
 <?php
 
-namespace Spoyntersmith\LaravelBackpackHelpDocs;
+namespace spoyntersmith\LaravelBackpackHelpDocs;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spoyntersmith\LaravelBackpackHelpDocs\Commands\LaravelBackpackHelpDocsCommand;
+use spoyntersmith\LaravelBackpackHelpDocs\Commands\LaravelBackpackHelpDocsCommand;
 
 class LaravelBackpackHelpDocsServiceProvider extends PackageServiceProvider
 {
@@ -17,15 +17,9 @@ class LaravelBackpackHelpDocsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-backpack-help-docs')
-            ->hasConfigFile('backpack/backpack-help-docs')
+            ->hasConfigFile()
             ->hasViews()
-            ->hasRoute('backpack/custom')
-            ->hasMigration('create_laravel_backpack_help_docs_table')
+            ->hasMigration('create_laravel-backpack-help-docs_table')
             ->hasCommand(LaravelBackpackHelpDocsCommand::class);
-
-        $this->app->config["filesystems.disks.help-docs"] = [
-            'driver' => 'local',
-            'root' => storage_path('app/help-docs'),
-        ];
     }
 }

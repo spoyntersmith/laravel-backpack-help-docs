@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) SeanPoynterSmith <spoyntersmith@users.noreply.github.com>
+Copyright (c) spoyntersmith <spoyntersmith@users.noreply.github.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
