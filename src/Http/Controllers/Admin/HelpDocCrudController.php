@@ -2,9 +2,9 @@
 
 namespace Spoyntersmith\LaravelBackpackHelpDocs\Http\Controllers\Admin;
 
-use Spoyntersmith\LaravelBackpackHelpDocs\Http\Requests\HelpDocRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Spoyntersmith\LaravelBackpackHelpDocs\Http\Requests\HelpDocRequest;
 
 /**
  * Class HelpDocCrudController
@@ -67,12 +67,12 @@ class HelpDocCrudController extends CrudController
         $this->crud->field('name');
 
         $this->crud->addField([
-            'name'    => 'content',
-            'label'   => 'Content',
-            'type'    => 'tinymce',
+            'name' => 'content',
+            'label' => 'Content',
+            'type' => 'tinymce',
             'options' => [
                 'plugins' => 'image,link,media',
-                'height'  => 500,
+                'height' => 500,
                 'removed_menuitems' => 'newdocument',
                 'file_picker_types' => 'image',
                 'images_upload_base_path' => '/help-doc-images',
@@ -97,7 +97,8 @@ class HelpDocCrudController extends CrudController
         $this->setupCreateOperation();
     }
 
-    protected function setupShowOperation() {
+    protected function setupShowOperation()
+    {
         $this->crud->set('show.setFromDb', false);
         $this->crud->column('name');
         $this->crud->column('content')->type('textarea')->attributes([

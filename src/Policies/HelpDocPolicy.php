@@ -2,9 +2,9 @@
 
 namespace Spoyntersmith\LaravelBackpackHelpDocs\Policies;
 
-use Spoyntersmith\LaravelBackpackHelpDocs\Models\HelpDoc;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Spoyntersmith\LaravelBackpackHelpDocs\Models\HelpDoc;
 
 class HelpDocPolicy
 {
