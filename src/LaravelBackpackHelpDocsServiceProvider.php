@@ -17,9 +17,9 @@ class LaravelBackpackHelpDocsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-backpack-help-docs')
-            ->hasConfigFile()
+            ->hasConfigFile('backpack/help-docs')
             ->hasViews()
-            ->hasMigration('create_laravel-backpack-help-docs_table')
-            ->hasCommand(LaravelBackpackHelpDocsCommand::class);
+            ->hasCommand(LaravelBackpackHelpDocsCommand::class)
+            ->hasMigration('create_laravel-backpack-help-docs_table');
     }
 }
