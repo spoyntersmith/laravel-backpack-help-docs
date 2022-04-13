@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "spoyntersmith\\LaravelBackpackHelpDocs\\": "src",
-            "spoyntersmith\\LaravelBackpackHelpDocs\\Database\\Factories\\": "database/factories"
+            "Spoyntersmith\\LaravelBackpackHelpDocs\\": "src",
+            "Spoyntersmith\\LaravelBackpackHelpDocs\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "spoyntersmith\\LaravelBackpackHelpDocs\\Tests\\": "tests"
+            "Spoyntersmith\\LaravelBackpackHelpDocs\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "spoyntersmith\\LaravelBackpackHelpDocs\\LaravelBackpackHelpDocsServiceProvider"
+                "Spoyntersmith\\LaravelBackpackHelpDocs\\LaravelBackpackHelpDocsServiceProvider"
             ],
             "aliases": {
-                "LaravelBackpackHelpDocs": "spoyntersmith\\LaravelBackpackHelpDocs\\LaravelBackpackHelpDocsFacade"
+                "LaravelBackpackHelpDocs": "Spoyntersmith\\LaravelBackpackHelpDocs\\LaravelBackpackHelpDocsFacade"
             }
         }
     },

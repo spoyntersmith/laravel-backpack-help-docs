@@ -10,6 +10,9 @@ class LaravelBackpackHelpDocsCommand extends Command
 
     public $description = 'My command';
 
+    /**
+     * @return int
+     */
     public function handle(): int
     {
         $this->comment('All done');
