@@ -41,6 +41,7 @@ php artisan migrate
 ```
 ```bash
 php artisan backpack:add-sidebar-content "<li class='nav-item'><a class='nav-link' href='{{ backpack_url('help-doc') }}'><i class='nav-icon la la-question'></i> Help docs</a></li>"
+php artisan backpack:add-sidebar-content "<x-help-docs-widget/>"
 ```
 
 You can publish the config file with:
