@@ -22,7 +22,9 @@ class HelpDocFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->sentence,
+            'content' => $this->faker->paragraph,
+            'plain_content' => $this->faker->paragraph,
         ];
     }
 }

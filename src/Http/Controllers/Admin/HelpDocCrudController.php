@@ -30,7 +30,7 @@ class HelpDocCrudController extends CrudController
         CRUD::setModel(\Spoyntersmith\LaravelBackpackHelpDocs\Models\HelpDoc::class);
         CRUD::setRoute(config('backpack.base.route_prefix').'/help-doc');
         CRUD::setEntityNameStrings('help doc', 'help docs');
-        $this->crud->setShowView('backpack-help-docs::show-help-doc');
+        $this->crud->setShowView('laravel-backpack-help-docs::show-help-doc');
     }
 
     /**
