@@ -19,5 +19,4 @@ class LaravelBackpackHelpDocsCommand extends Command
 
         return self::SUCCESS;
     }
-
 }
